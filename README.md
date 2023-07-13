@@ -1,0 +1,1 @@
+# data-platform-api-business-partner-deletes-rmq-kube
