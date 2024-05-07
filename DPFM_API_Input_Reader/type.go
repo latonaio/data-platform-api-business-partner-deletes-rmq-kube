@@ -70,12 +70,75 @@ type SDC struct {
 }
 
 type General struct {
-	BusinessPartner     int            	  `json:"BusinessPartner"`
-	IsMarkedForDeletion *bool             `json:"IsMarkedForDeletion"`
-	Accounting		    []Accounting	  `json:"Accounting"`
+	BusinessPartner     	int			`json:"BusinessPartner"`
+	IsMarkedForDeletion 	*bool		`json:"IsMarkedForDeletion"`
+	Role					[]Role		`json:"Role"`
+	Person					[]Person	`json:"Person"`
+	SNS						[]SNS		`json:"SNS"`
+	GPS						[]GPS		`json:"GPS"`
+	Rank					[]Rank		`json:"Rank"`
+	PersonOrganization		[]PersonOrganization		`json:"PersonOrganization"`
+	PersonMobilePhoneAuth	[]PersonMobilePhoneAuth		`json:"PersonMobilePhoneAuth"`
+	PersonGoogleAccountAuth	[]PersonGoogleAccountAuth	`json:"PersonGoogleAccountAuth"`
+	PersonInstagramAuth		[]PersonInstagramAuth		`json:"PersonInstagramAuth"`
+	FinInst					[]FinInst		`json:"FinInst"`
+	Accounting				[]Accounting	`json:"Accounting"`
+}
+
+type Role struct {
+	BusinessPartner     int		`json:"BusinessPartner"`
+	BusinessPartnerRole	string	`json:"BusinessPartnerRole"`
+	IsMarkedForDeletion *bool	`json:"IsMarkedForDeletion"`
+}
+
+type Person struct {
+	BusinessPartner     int		`json:"BusinessPartner"`
+	IsMarkedForDeletion *bool	`json:"IsMarkedForDeletion"`
+}
+
+type SNS struct {
+	BusinessPartner     int		`json:"BusinessPartner"`
+	IsMarkedForDeletion *bool	`json:"IsMarkedForDeletion"`
+}
+
+type GPS struct {
+	BusinessPartner     int		`json:"BusinessPartner"`
+	IsMarkedForDeletion *bool	`json:"IsMarkedForDeletion"`
+}
+
+type Rank struct {
+	BusinessPartner     int		`json:"BusinessPartner"`
+	RankType			string	`json:"RankType"`
+	IsMarkedForDeletion *bool	`json:"IsMarkedForDeletion"`
+}
+
+type PersonOrganization struct {
+	BusinessPartner     int		`json:"BusinessPartner"`
+	IsMarkedForDeletion *bool	`json:"IsMarkedForDeletion"`
+}
+
+type PersonMobilePhoneAuth struct {
+	BusinessPartner     int		`json:"BusinessPartner"`
+	IsMarkedForDeletion *bool	`json:"IsMarkedForDeletion"`
+}
+
+type PersonGoogleAccountAuth struct {
+	BusinessPartner     int		`json:"BusinessPartner"`
+	IsMarkedForDeletion *bool	`json:"IsMarkedForDeletion"`
+}
+
+type PersonInstagramAuth struct {
+	BusinessPartner     int		`json:"BusinessPartner"`
+	IsMarkedForDeletion *bool	`json:"IsMarkedForDeletion"`
+}
+
+type FinInst struct {
+	BusinessPartner     	int		`json:"BusinessPartner"`
+	FinInstIdentification	int     `json:"FinInstIdentification"`
+	IsMarkedForDeletion		*bool	`json:"IsMarkedForDeletion"`
 }
 
 type Accounting struct {
-	BusinessPartner     int            	  `json:"BusinessPartner"`
-	IsMarkedForDeletion *bool             `json:"IsMarkedForDeletion"`
+	BusinessPartner     int		`json:"BusinessPartner"`
+	IsMarkedForDeletion *bool	`json:"IsMarkedForDeletion"`
 }
